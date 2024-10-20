@@ -14,8 +14,9 @@ contextBridge.exposeInMainWorld('versions', {
     chrome: () => process.versions.chrome,
     electron: () => process.versions.electron,
     ping: () => ipcRenderer.invoke('ping'),
+    // 可以传递参数，任何支持的JavaScript类型
+
     // 除函数之外，我们也可以暴露变量
 })
-
 
 
