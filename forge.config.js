@@ -44,4 +44,17 @@ module.exports = {
             [FuseV1Options.OnlyLoadAppFromAsar]: true,
         }),
     ],
+    publishers: [
+        {
+            name: '@electron-forge/publisher-github',
+            config: {
+                repository: {
+                    owner: 'zhengkangwu666',
+                    name: 'yi_guan_li_app'
+                },
+                prerelease: false,
+                draft: true
+            }
+        }
+    ]
 };

@@ -40,5 +40,5 @@ app.on('window-all-closed', () => {
 
 
 
-
-
+require('update-electron-app')()
+// 用于实现应用的自动更新
