@@ -1,6 +1,25 @@
 const { app, BrowserWindow, ipcMain } = require('electron/main')
 const path = require('path')
 
+// 连接数据库
+const mysql = require('mysql2')
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'root',
+    database: 'yi_guan_li_database'
+})
+connection.connect((err) => {
+    if(err) {
+        console.log('connection failed', err)
+        return;
+    }
+    console.log('connection succeeded')
+})
+
+
+
+
 const createWindow = () => {
     const win = new BrowserWindow({
         width: 800,
@@ -39,6 +58,6 @@ app.on('window-all-closed', () => {
 
 
 
-
-require('update-electron-app')()
 // 用于实现应用的自动更新
+// require('update-electron-app')()
+

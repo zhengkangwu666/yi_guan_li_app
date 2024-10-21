@@ -30,6 +30,7 @@
     },
     "dependencies": {
         "electron-squirrel-startup": "^1.0.1",
+        "mysql2": "^3.11.3",
         "update-electron-app": "^3.0.0"
     }
 }
